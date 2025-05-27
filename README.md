@@ -1,48 +1,60 @@
 # Task Management App 
 
-Hello!! welcome to the Task Management App! This is a simple, beginner-friendly React + TypeScript project that lets you create, edit, and delete tasks, all while learning how to use TypeScript, Context API, and Auth0 for authentication.
----
-
-## Table of Contents
-
-1. [Features](#features)  
-2. [Tech Stack](#tech-stack)  
-3. [Getting Started](#getting-started)  
-    1. [Clone the Repo](#clone-the-repo)  
-    2. [Install Dependencies](#install-dependencies)  
-    3. [Configure Env Variables](#configure-env-variables)  
-    4. [Run the App](#run-the-app)  
-4. [Usage](#usage)  
-
+A simple, beginner-friendly task manager built with React, TypeScript, Vite, and Auth0.  
+Seamelessly manage tasks, track progree, and keep your to-dos in check—all in one place.
 
 ---
 
-## Features
+## Key Features
 
-- **Dashboard**: View all your tasks in one place  
-- **Create / Edit / Delete**: Fully typed forms for adding or updating tasks  
-- **Detail View**: Click a task to see its full details  
-- **Auth0 Authentication**: Secure login / logout with Auth0  
-- **TypeScript Everywhere**: Interfaces & type-only imports for safety  
-- **Context API**: Global state management with React Context  
+**Simple Task Management**  
+- Create, edit, delete tasks  
+- View task details (title, description, due date, status)  
+
+**Global State & Typed Hooks**  
+- `useState` hooks with full TypeScript types  
+- Context API for sharing tasks across components  
+
+**Auth0 Authentication**  
+- Login / logout with Auth0  
+- Protect create/edit pages so only signed-in users can use them  
+
+**Error Handling & Validation**  
+- Inline error messages if fields are empty  
+- Save button disabled until form is valid  
+
+**TypeScript Everywhere**  
+- Interfaces for `Task` and `AuthUser`  
+- `import type { … }` for cleaner code  
 
 ---
+## Project Structure 
+task_management/
+├── public/
+│   └── index.html        # HTML entry point
+├── src/
+│   ├── components/       # Reusable UI parts 
+│   ├── context/          # TaskContext 
+│   ├── pages/            # Dashboard, TaskForm, TaskEdit, TaskDetails, Login, Profile
+│   ├── types/            # TS interfaces 
+│   ├── App.tsx           # Route definitions
+│   ├── main.tsx          # ReactDOM + BrowserRouter + Providers
+│   └── index.css         # Global styles
+├── .env                  # Auth0 env vars 
+├── .gitignore
+├── package.json
+└── tsconfig.json
 
-## Tech Stack
 
-- **React** (v18+)  
-- **Vite** (dev server)  
-- **TypeScript** (strict mode)  
-- **Auth0 React SDK** (auth0-react)  
-- **React Router** (client-side routing)  
-- **uuid** (IDs for tasks)  
 
----
+## Quick Start
 
-## Getting Started
+### Prerequisites
+- Node.js (v16 or higher)  
+- npm  
 
-### Clone the Repo
-
+### Installation
 ```bash
-git clone https://github.com/dielac/task_management
+git clone https://github.com/dielac/task_management.git
 cd task_management
+npm install
