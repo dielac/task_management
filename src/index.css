@@ -1,0 +1,91 @@
+:root {
+  --page-bg: #fdbebe;
+  --text-color: rgba(163, 18, 18, 0.87);
+  --pink-border: #f5c2c2;
+  --link-color: #fcfcf9;
+
+
+
+
+}
+
+html,
+body,
+#root {
+
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+a {
+  color: var(--link-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.task-list li {
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #320000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #b97272;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+button:hover {
+  border-color: var(--link-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
